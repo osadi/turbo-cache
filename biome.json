@@ -1,0 +1,59 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+	"vcs": {
+		"enabled": false,
+		"clientKind": "git",
+		"useIgnoreFile": false
+	},
+	"files": {
+		"ignoreUnknown": false,
+		"ignore": [
+			"cdk.out",
+			"node_modules",
+			".vscode",
+			"build",
+			"public",
+			"coverage"
+		]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"rules": {
+			"style": {
+				"useBlockStatements": {
+					"fix": "safe",
+					"level": "error"
+				}
+			},
+			"correctness": {
+				"noUnusedImports": {
+					"fix": "safe",
+					"level": "error"
+				}
+			},
+			"nursery": {
+				"noRestrictedImports": {
+					"level": "error",
+					"options": {
+						"paths": {
+							"lodash": "Using lodash is forbidden",
+							"lodash/template": "Using lodash is forbidden",
+							"lodash.template": "Using lodash is forbidden"
+						}
+					}
+				}
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single"
+		}
+	}
+}

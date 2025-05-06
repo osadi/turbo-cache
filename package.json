@@ -1,0 +1,32 @@
+{
+	"name": "@osadi/turbo-cache",
+	"license": "MIT",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"test": "vitest run",
+		"ts-check": "tsc --noEmit",
+		"lint": "biome lint --write --skip=suspicious/noExplicitAny",
+		"cdk": "cdk",
+		"bootstrap": "cdk bootstrap",
+		"release": "cdk deploy",
+		"synth": "cdk synth"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/aws-lambda": "^8.10.149",
+		"@types/node": "^22.15.12",
+		"aws-cdk-lib": "^2.194.0",
+		"constructs": "^10.4.2",
+		"esbuild": "^0.25.4",
+		"tsx": "^4.19.4"
+	},
+	"dependencies": {
+		"@aws-sdk/s3-request-presigner": "^3.797.0",
+		"@aws-sdk/util-format-url": "^3.775.0",
+		"@smithy/hash-node": "^4.0.2",
+		"@smithy/protocol-http": "^5.1.0",
+		"@smithy/url-parser": "^4.0.2",
+		"jose": "^6.0.10"
+	}
+}
